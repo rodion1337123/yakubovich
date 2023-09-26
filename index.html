@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.container {
+			width: 600px;
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+			margin-bottom: 100px;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+		span{
+			/ ;
+ 			font-size: 50px;
+ 			padding: 10px;
+ 			color: grey;
+ 			font-weight: 700;
+ 			border: 1px solid black;
+
+		}
+		
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="container mx-auto d-flex bg-light">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<!-- Добавьте классы для букв сами -->
+	<span class="prav4">A</span>
+	<span class="neprav1">Б</span>
+	<span class="neprav2">В</span>
+	<span class="prav1">Г</span>
+	<span class="neprav3">Д</span>		
+	<span class="neprav4">Е</span>	
+	<span class="neprav5">Ё</span>
+	<span class="neprav6">Ж</span>
+	<span class="neprav7">З</span>
+	<span class="prav2">И</span>
+	<span class="neprav8">Й</span>
+	<span class="neprav9">К</span>
+	<span class="neprav10">Л</span>
+	<span class="neprav11">М</span>
+	<span class="neprav12">Н</span>
+	<span class="neprav13">О</span>
+	<span class="neprav14">П</span>
+	<span class="prav5">Р</span>
+	<span class="neprav15">С</span>
+	<span class="prav3">Т</span>
+	<span class="neprav16">У</span>
+	<span class="neprav17">Ф</span>
+	<span class="neprav18">Х</span>
+	<span class="neprav19">Ц</span>
+	<span class="neprav20">Ч</span>
+	<span class="neprav21">Ш</span>
+	<span class="neprav22">Щ</span>
+	<span class="neprav23">Ъ</span>
+	<span class="neprav24">Ы</span>
+	<span class="neprav25">Ь</span>
+	<span class="neprav26">Э</span>
+	<span class="neprav27">Ю</span>
+	<span class="neprav28">Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+		let p1 = document.querySelector(".prav1")
+		let p2 = document.querySelector(".prav2")
+		let p3 = document.querySelector(".prav3")
+		let p4 = document.querySelector(".prav4")
+		let p5 = document.querySelector(".prav5")
+
+		let l1 = document.querySelector(".letter1")
+		let l2 = document.querySelector(".letter2")
+		let l3 = document.querySelector(".letter3")
+		let l4 = document.querySelector(".letter4")
+		let l5 = document.querySelector(".letter5")
+		let l6 = document.querySelector(".letter6")
+
+		let nep1 = document.querySelector(".neprav1")
+		let nep2 = document.querySelector(".neprav2")
+		let nep3 = document.querySelector(".neprav3")
+		let nep4 = document.querySelector(".neprav4")
+		let nep5 = document.querySelector(".neprav5")
+		let nep6 = document.querySelector(".neprav6")
+		let nep7 = document.querySelector(".neprav7")
+		let nep8 = document.querySelector(".neprav8")
+		let nep9 = document.querySelector(".neprav9")
+		let nep10 = document.querySelector(".neprav10")
+		let nep11 = document.querySelector(".neprav11")
+		let nep12 = document.querySelector(".neprav12")
+		let nep13 = document.querySelector(".neprav13")
+		let nep14 = document.querySelector(".neprav14")
+		let nep15 = document.querySelector(".neprav15")
+		let nep16 = document.querySelector(".neprav16")
+		let nep17 = document.querySelector(".neprav17")
+		let nep18 = document.querySelector(".neprav18")
+		let nep19 = document.querySelector(".neprav19")
+		let nep20 = document.querySelector(".neprav20")
+		let nep21 = document.querySelector(".neprav21")
+		let nep22 = document.querySelector(".neprav22")
+		let nep23 = document.querySelector(".neprav23")
+		let nep24 = document.querySelector(".neprav24")
+		let nep25 = document.querySelector(".neprav25")
+		let nep26 = document.querySelector(".neprav26")
+		let nep27 = document.querySelector(".neprav27")
+		let nep28 = document.querySelector(".neprav28")
+
+
+
+		let right = "yellow"
+		let letters = 0;
+
+
+		p1.onclick = function () {
+			l1.style.background = right;
+			letters = letters + 1;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		p2.onclick = function () {
+			l2.style.background = right;
+			letters = letters + 1;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		p3.onclick = function () {
+			l3.style.background = right;
+			letters = letters + 1;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		p3.onclick = function () {
+			l3.style.background = right;
+			letters = letters + 1;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		p4.onclick = function () {
+			l4.style.background = right;
+			l6.style.background = right;
+			letters = letters + 2;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		p5.onclick = function () {
+			l5.style.background = right;
+			letters = letters + 1;
+			if (letters == 6) {
+				document.querySelector(".yakubovich").style.backgroundImage = "url(2.jpg)"
+			}
+		}
+		nep1.onclick = function () {
+			alert("Неверно!");
+		}
+		nep2.onclick = function () {
+			alert("Неверно!");
+		}
+		nep3.onclick = function () {
+			alert("Неверно!");
+		}
+		nep4.onclick = function () {
+			alert("Неверно!");
+		}
+		nep5.onclick = function () {
+			alert("Неверно!");
+		}
+		nep6.onclick = function () {
+			alert("Неверно!");
+		}
+		nep7.onclick = function () {
+			alert("Неверно!");
+		}
+		nep8.onclick = function () {
+			alert("Неверно!");
+		}
+		nep9.onclick = function () {
+			alert("Неверно!");
+		}
+		nep10.onclick = function () {
+			alert("Неверно!");
+		}
+		nep11.onclick = function () {
+			alert("Неверно!");
+		}
+		nep12.onclick = function () {
+			alert("Неверно!");
+		}
+		nep13.onclick = function () {
+			alert("Неверно!");
+		}
+		nep14.onclick = function () {
+			alert("Неверно!");
+		}
+		nep15.onclick = function () {
+			alert("Неверно!");
+		}
+		nep16.onclick = function () {
+			alert("Неверно!");
+		}
+		nep17.onclick = function () {
+			alert("Неверно!");
+		}
+		nep18.onclick = function () {
+			alert("Неверно!");
+		}
+		nep19.onclick = function () {
+			alert("Неверно!");
+		}
+		nep20.onclick = function () {
+			alert("Неверно!");
+		}
+		nep21.onclick = function () {
+			alert("Неверно!");
+		}
+		nep22.onclick = function () {
+			alert("Неверно!");
+		}
+		nep23.onclick = function () {
+			alert("Неверно!");
+		}
+		nep24.onclick = function () {
+			alert("Неверно!");
+		}
+		nep25.onclick = function () {
+			alert("Неверно!");
+		}
+		nep26.onclick = function () {
+			alert("Неверно!");
+		}
+		nep27.onclick = function () {
+			alert("Неверно!");
+		}
+		nep28.onclick = function () {
+			alert("Неверно!");
+		}
+
+	</script>
+</body>
+</html>
